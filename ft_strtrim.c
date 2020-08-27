@@ -6,7 +6,7 @@
 /*   By: yomoon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/23 15:27:42 by yomoon            #+#    #+#             */
-/*   Updated: 2020/08/25 16:32:18 by yomoon           ###   ########.fr       */
+/*   Updated: 2020/08/28 01:32:51 by yomoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (0);
 	ft_strlcpy(trim, s1 + start, len + 1);
 	return (trim);
-}	
+}

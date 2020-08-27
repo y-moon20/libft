@@ -6,14 +6,15 @@
 /*   By: yomoon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/14 00:17:44 by yomoon            #+#    #+#             */
-/*   Updated: 2020/08/14 00:18:28 by yj               ###   ########.fr       */
+/*   Updated: 2020/08/28 01:34:03 by yomoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+#include "libft.h"
+
+int	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)
 		return (c + 32);
 	return (c);
 }
-
