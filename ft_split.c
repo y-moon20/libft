@@ -6,13 +6,13 @@
 /*   By: yomoon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/23 11:30:41 by yomoon            #+#    #+#             */
-/*   Updated: 2020/08/23 16:10:14 by yomoon           ###   ########.fr       */
+/*   Updated: 2020/08/30 01:52:07 by yomoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		strlen_sep(char *str, char c)
+static int		strlen_sep(char const *str, char c)
 {
 	int		ret;
 
@@ -27,7 +27,7 @@ static int		strlen_sep(char *str, char c)
 	return (ret);
 }
 
-static int		count_word(char *str, char c)
+static int		count_word(char const *str, char c)
 {
 	int		ret;
 	int		len;
@@ -70,31 +70,31 @@ static int		split_alloc(char **ret, int len, int i)
 	return (1);
 }
 
-char			**ft_split(char *str, char c)
+char			**ft_split(char const *s, char c)
 {
 	char	**ret;
 	int		len;
 	int		i;
 
-	if (!str)
+	if (!s)
 		return (0);
-	len = count_word(str, c);
+	len = count_word(s, c);
 	if (!(ret = (char**)malloc(sizeof(char*) * (len + 1))))
 		return (0);
 	ret[len] = 0;
 	i = 0;
-	while (*str != '\0')
+	while (*s != '\0')
 	{
-		len = strlen_sep(str, c);
+		len = strlen_sep(s, c);
 		if (len != 0)
 		{
 			if (!(split_alloc(ret, len, i)))
 				return (0);
-			ft_strlcpy(ret[i++], str, len + 1);
-			str += len;
+			ft_strlcpy(ret[i++], s, len + 1);
+			s += len;
 		}
 		else
-			str++;
+			s++;
 	}
 	return (ret);
 }
