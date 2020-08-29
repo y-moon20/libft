@@ -6,13 +6,13 @@
 /*   By: yomoon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/23 01:01:49 by yomoon            #+#    #+#             */
-/*   Updated: 2020/08/23 01:07:44 by yomoon           ###   ########.fr       */
+/*   Updated: 2020/08/30 01:45:27 by yomoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*ret;
 	size_t	i;
