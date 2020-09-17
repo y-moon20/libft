@@ -6,7 +6,7 @@
 /*   By: yomoon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/30 02:15:09 by yomoon            #+#    #+#             */
-/*   Updated: 2020/08/30 02:33:38 by yomoon           ###   ########.fr       */
+/*   Updated: 2020/09/18 00:28:19 by yomoon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int					ft_tolower(int c);
 int					ft_toupper(int c);
 char				*ft_itoa(int n);
 char				*ft_strdup(const char *s1);
+char				*ft_strndup(const char *s1, size_t size);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(char const *s, int c);
 char				*ft_strnstr(const char *haystack,
